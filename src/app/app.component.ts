@@ -39,11 +39,16 @@ export class AppComponent implements OnInit {
   }
 
   onPageChange($event) {
-    console.log($event);
-    this.api.getPopularMovies($event.page).subscribe((res: MovieResponse) => {
-      this.movies = res.results;
-      // this.scrollToTop();
-    });
+    if (this.searchMode) {
+      this.api.searchMovie(this.searchMovie, $event.page).subscribe((res: MovieResponse) => {
+        this.movies = res.results;
+      });
+    }
+    else {
+      this.api.getPopularMovies($event.page).subscribe((res: MovieResponse) => {
+        this.movies = res.results;
+      });
+    }
   }
 
   onSearch($event) {

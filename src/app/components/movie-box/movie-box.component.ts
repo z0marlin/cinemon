@@ -36,7 +36,6 @@ export class MovieBoxComponent implements OnInit {
     if (this.currentPage > 1) {
       this.haveMoreBackward = true;
     }
-    console.log(this.currentPage, this.haveMoreBackward, this.haveMoreForward);
     this.changePage.emit({page: this.currentPage});
   }
 
@@ -51,7 +50,6 @@ export class MovieBoxComponent implements OnInit {
     if (this.currentPage < this.totalPages) {
       this.haveMoreForward = true;
     }
-    console.log(this.currentPage, this.haveMoreBackward, this.haveMoreForward);
     this.changePage.emit({ page: this.currentPage });
   }
 
