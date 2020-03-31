@@ -1,0 +1,9 @@
+#app-navbar {
+    background: linear-gradient(120deg, #00e4d0, #5983e8);
+}
+
+.search {
+    border: 0;
+    box-shadow: none;
+    width: 20vw;
+}

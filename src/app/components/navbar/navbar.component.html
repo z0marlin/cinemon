@@ -1,0 +1,26 @@
+<nav class="navbar navbar-dark navbar-expand-md" id="app-navbar">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="" (click)="onHome()">
+            <p class="h3" id="brand-logo">Cinetime</p>
+        </a>
+        <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navcol-1">
+            <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item" role="presentation">
+                    <span class="badge badge-pill badge-light">
+                        <input class="search mt-2 mb-2"
+                        type="text"
+                        placeholder="Search"
+                        [(ngModel)]="searchString"
+                        (keyup.enter)="onSearch()">
+                    </span>
+                </li>
+                <!-- <li class="nav-item" role="presentation"><a class="nav-link" href="#">Second Item</a></li> -->
+                <!-- <li class="nav-item" role="presentation"><a class="nav-link" href="#">Third Item</a></li> -->
+            </ul>
+        </div>
+    </div>
+</nav>

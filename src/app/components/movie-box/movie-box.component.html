@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row justify-content-start">
+        <div class="col">
+            <div id="movie-box-top"></div>
+            <p class="h3">{{ title }}</p>
+        </div>
+    </div>
+    <div class="row justify-content-start">
+        <div class="col-md-3 mb-3" *ngFor="let movie of movies">
+            <app-movie-card [title]="movie.title" [img] = "getPosterUrl(movie.poster_path)"></app-movie-card>
+        </div>
+    </div>
+    <div class="container">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                <li class="page-item">
+                    <a class="page-link"
+                    aria-label="Previous"
+                    (click)="prevPage()">
+                      <span aria-hidden="true">&laquo;</span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link">Page: {{ currentPage }}</a></li>
+                <li class="page-item">
+                    <a class="page-link" aria-label="Next" (click)="nextPage()">
+                      <span aria-hidden="true">&raquo;</span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+  
+  

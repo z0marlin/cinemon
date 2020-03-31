@@ -1,0 +1,8 @@
+.card.movie-card {
+    max-width: 300px;
+}
+
+.card-title.movie-title {
+    /* white-space: nowrap; */
+    font-size: 0.75vw;
+}
