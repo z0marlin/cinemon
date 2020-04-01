@@ -10,6 +10,7 @@ export class NavbarComponent implements OnInit {
   @Output() search = new EventEmitter();
   @Output() home = new EventEmitter();
   searchString = '';
+  searchOff = true;
 
   constructor() { }
 
@@ -21,12 +22,17 @@ export class NavbarComponent implements OnInit {
       return;
     }
     // console.log('emitting search');
+    this.searchOff = true;
     this.search.emit({movieName: this.searchString, page: 1});
   }
 
   onHome() {
     // console.log('emitting home');
     this.home.emit();
+  }
+
+  toggleSearch() {
+    this.searchOff = !this.searchOff;
   }
 
 }
